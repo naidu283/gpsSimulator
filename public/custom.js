@@ -153,8 +153,8 @@ function automate()
     setInterval(()=>{
      
    
-        sendGPSRequest2();
-        sendHeartbeatRequest();
+        sendGPSRequest();
+       // sendHeartbeatRequest();
 
     }, 3000)
 }
