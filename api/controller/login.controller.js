@@ -16,15 +16,17 @@ module.exports.loginResponse = (req, res)=>
     let response = Buffer.from('78 78 05 01 00 05 9F F8 0D 0A', 'hex');
      resultResponse = crc16(buff);
     logingChecking = true;
-    res.send({status:logingChecking, loginResponse: resultResponse});
+   
    }
    else 
    {
     resultResponse = "not valid input";
     logingChecking = false;
+
+
    }
    
-
+   res.send({status:logingChecking, loginResponse: resultResponse});
  
 
 }
